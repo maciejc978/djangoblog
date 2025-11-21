@@ -6,22 +6,24 @@
 </head>
 <body>
     <div>
-    <h1>Witam na stronie bloga!</h1>
-    <h2>Blog o programowaniu</h2>
-    <h3>Autor: Strefa kursów</h3>
-    <h4>Wszelkie prawa zastrzeżone</h4>
+        <h1>Witam na stronie bloga!</h1>
+        <h2>Blog o programowaniu</h2>
+        <h3>Autor: Strefa kursów</h3>
+        <h4>Wszelkie prawa zastrzeżone</h4>
     </div>
-    <div>
-    <p>To jest akapit</p>
-    <em>To jest wyróżniony tekst</em><br>
-    <strong>Tu jest pogrubiony tekst</strong><br>
-    <a href="https://strefakursow.pl">LINK</a>
+    {% comment "komentarz autora" %}
+    Lista postów
+    {% endcomment %}
+    {% for post in posts %}
+        <div>
+        <p>opublikowany:{{post.publish.date}}</p>
+        <h2><a href="">{{post.title}}</a></h2>
+        <em>{{post.text|linebreaksbr}}</em>
     </div>
+    {% endfor %}
     <div>
     <ul>
-    <li>Elementy listy</li>
-    <li>Elementy listy</li>
-    <li>Elementy listy</li>
+
     </ul>
     </div>
 
